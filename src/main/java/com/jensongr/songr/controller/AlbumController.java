@@ -10,11 +10,11 @@ public class AlbumController {
     @GetMapping("/albums")
     public String albums(Model model) {
         Album[] albums = {
-                new Album("Album 1", "Artist 1", 10, 300, "album1.jpg"),
-                new Album("Album 2", "Artist 2", 12, 320, "album2.jpg"),
-                new Album("Album 3", "Artist 3", 8, 250, "album3.jpg")
+                new Album("Channel Orange", "Frank Ocean", 17, 62 * 60 + 18, "channel_orange.jpeg"),
+                new Album("AM", "Arctic Monkeys", 12, 41 * 60 + 38, "am.jpg"),
+                new Album("Sawayama", "Rina Sawayama", 13, 43 * 60, "sawayama.png")
         };
         model.addAttribute("albums", albums);
-        return "albums";
+        return "album";
     }
 }

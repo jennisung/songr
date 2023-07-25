@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Albums</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<h1>Albums</h1>
+<div class="album-container">
+    <div th:each="album : ${albums}" class="album">
+        <h2 th:text="${album.title}"></h2>
+        <p th:text="${album.artist}"></p>
+    </div>
+</div>
+</body>
+</html>
