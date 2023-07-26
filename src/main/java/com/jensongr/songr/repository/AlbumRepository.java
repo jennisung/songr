@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface AlbumRepository extends JpaRepository<Album, Long> {
     //default > save(), delete(), update(), findAll()
     //step 5: add magic method declaration
-//  public Album findByName(String name);
+  public Album findByTitle(String title);
 
 }

@@ -19,7 +19,7 @@ public class Album {
     private String imageUrl;
 
     //step 3: add protected default constructor
-    protected Album() {
+    public Album() {
     }
 
     public Album(String title, String artist, int songCount, int length, String imageUrl) {
