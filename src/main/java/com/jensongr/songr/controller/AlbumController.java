@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -25,9 +27,24 @@ public class AlbumController {
         model.addAttribute("albums", albums);
         return "albums";
     }
+
+    @GetMapping("/addAlbum")
+    public String addAlbumForm(Model model) {
+        model.addAttribute("album", new Album());
+        return "addAlbum";
+    }
+
+    @PostMapping("/addAlbum")
+    public String addAlbumSubmit(@ModelAttribute Album album) {
+        albumRepository.save(album);
+        return "redirect:/albums";
+    }
 }
 
 
+
+
+//three albums
 //import com.jensongr.songr.model.Album;
 //import org.springframework.stereotype.Controller;
 //import org.springframework.ui.Model;
