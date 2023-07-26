@@ -14,3 +14,19 @@ Create a route at /albums that shows three album instances. (These will be hardc
 
 ### Testing
 Ensure you have tested the constructor, getters, and setters for the Album class.
+
+
+## Lab Class 12
+### Feature Tasks
+Update your Album model so that it can be saved in a database.
+An Album has a title, an artist, a songCount, a length (in seconds), and an imageUrl that is a link to that album’s art.
+A user should be able to see information about all the albums on the site.
+A user should be able to add albums to the site.
+
+### App
+
+* Access the Songr application by visiting `http://localhost:8080` in your web browser.
+
+* To add a new album, click on the "Add Album" and fill out the form to add album.
+
+
