@@ -60,6 +60,6 @@ public class AlbumController {
 //                new Album("Sawayama", "Rina Sawayama", 13, 43 * 60, "sawayama.png")
 //        };
 //        model.addAttribute("albums", albums);
-//        return "album.html";
+//        return "albums.html";
 //    }
 //}
