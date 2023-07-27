@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="base :: base">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>Songr Splash Page</title>
+  <link rel="stylesheet" th:href="@{/style.css}" />
 </head>
 <body>
-<h1>Hello World, Splash page for Songr!</h1>
+<div class="splash-container">
+  <h1>Welcome to Songr!</h1>
 
-<ul>
-  <li><a th:href="@{/albums}">Albums</a></li>
-  <li><a th:href="@{/capitalize/example}">Capitalize</a></li>
-  <li><a th:href="@{/hello}"> Hello</a></li>
-  <li><a th:href="@{/}">Splash</a></li>
-</ul>
+  <ul>
+    <li><a th:href="@{/albums}">Albums</a></li>
+    <li><a th:href="@{/addAlbum}">Make a Playlist Albums</a></li>
+    <li><a th:href="@{/capitalize/example}">Capitalize</a></li>
+    <li><a th:href="@{/hello}">Hello</a></li>
+    <li><a th:href="@{/}">Back to Home</a></li>
+  </ul>
+</div>
 </body>
 </html>
+
