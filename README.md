@@ -30,3 +30,12 @@ A user should be able to add albums to the site.
 * To add a new album, click on the "Add Album" and fill out the form to add album.
 
 
+## Lab Class 13
+### Feature Tasks
+* Create a Song model.
+A Song has a title, a length (in seconds), a trackNumber, and the album on which that song appears.
+Ensure that the relationship between Albums and Songs is appropriately set up.
+* A user should be able to see information about all the songs on the site.
+* A user should be able to view a page with data about one particular album.
+* A user should be able to see the songs that belong to an album when looking at that album.
+* A user should be able to add songs to an album.
