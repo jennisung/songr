@@ -1,9 +1,9 @@
 package com.jensongr.songr.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.*;
+
 
 //step 1: add @entity to class
 @Entity
@@ -18,11 +18,16 @@ public class Album {
     private int length;
     private String imageUrl;
 
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    List<Song> songs;
+
     //step 3: add protected default constructor
-    public Album() {
+    protected Album() {
     }
 
-    public Album(String title, String artist, int songCount, int length, String imageUrl) {
+
+    public Album(long id, String title, String artist, int songCount, int length, String imageUrl) {
+        this.id = id;
         this.title = title;
         this.artist = artist;
         this.songCount = songCount;
@@ -77,4 +82,7 @@ public class Album {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
+
+
 }
