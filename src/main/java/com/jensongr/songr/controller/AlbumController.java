@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -43,7 +44,12 @@ public class AlbumController {
 
 
     //lab 13
-
+    @GetMapping("/{id}")
+    public String getAlbum(Model model, @PathVariable Long id) {
+        Album album = albumRepository.getById(id);
+        model.addAttribute("album", album);
+        return "album.html";
+    }
 
 
 }
