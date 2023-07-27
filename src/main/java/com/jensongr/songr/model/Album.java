@@ -22,8 +22,8 @@ public class Album {
     List<Song> songs;
 
     //step 3: add protected default constructor
-    protected Album() {
-    }
+//    public Album(String am, String arcticMonkeys, int i, int i1, String image) {
+//    }
 
 
     public Album(long id, String title, String artist, int songCount, int length, String imageUrl) {
@@ -33,6 +33,10 @@ public class Album {
         this.songCount = songCount;
         this.length = length;
         this.imageUrl = imageUrl;
+    }
+
+    public Album() {
+
     }
 
     public Long getId() {
