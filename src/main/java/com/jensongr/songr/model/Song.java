@@ -7,11 +7,11 @@ public class Song {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
 
-    private String title;
-    private int songLength;
-    private int trackNumber;
+    String title;
+    Integer songLength;
+    Integer trackNumber;
 
     @ManyToOne
     private Album album;
