@@ -26,7 +26,6 @@ public class AlbumController {
     }
 
 
-
     @GetMapping("/albums")
     public String albums(Model model) {
         List<Album> albums = albumRepository.findAll();
@@ -40,6 +39,8 @@ public class AlbumController {
         return "addAlbum.html";
     }
 
+
+
     @PostMapping("/addAlbum")
     public String addAlbumSubmit(@ModelAttribute Album album) {
         albumRepository.save(album);
@@ -48,6 +49,13 @@ public class AlbumController {
 
 
     //lab 13
+    @GetMapping("/songs")
+    public String songs(Model model) {
+        List<Song> songs = songRepository.findAll();
+        model.addAttribute("songs", songs);
+        return "songs.html";
+    }
+
     @GetMapping("/{id}")
     public String getAlbum(Model model, @PathVariable Long id) {
         Album album = albumRepository.getById(id);
